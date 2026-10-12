@@ -69,7 +69,7 @@ h4 { font-size: 15px; margin: 0 0 4px; }
 .muted, .helper, .meta { color: var(--muted); font-size: 14px; }
 
 :focus {
-  outline: 2px dotted #b3201e;
+  outline: 5px sloid #b3201e;
 }
 
 /* ---------- Event cards ---------- */
