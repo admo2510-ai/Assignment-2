@@ -68,10 +68,16 @@ function validateCheckout(e) {
   }
 
   // Clear any previously rendered messages.
-  Array.prototype.forEach.call(form.querySelectorAll('.error-text'), function (n) {
+  Array.prototype.forEach.call(form.querySelectorAll('.error-text:not(#payerror)'), function (n) {
     n.parentNode.removeChild(n);
   });
 
+  document.getElementById('payerror').textContent = problems.map(function(p) {
+    return p.message;
+  }).join(' ');
+
+
+  
   if (problems.length === 0) {
     window.location = 'confirmation.html';
     return;
