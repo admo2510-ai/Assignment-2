@@ -68,7 +68,7 @@ function validateCheckout(e) {
   }
 
   // Clear any previously rendered messages.
-  Array.prototype.forEach.call(form.querySelectorAll('.error-text:not(#payerror)'), function (n) {
+  Array.prototype.forEach.call(form.querySelectorAll('.error-text'), function (n) {
     n.parentNode.removeChild(n);
   });
 
