@@ -82,7 +82,7 @@ function validateCheckout(e) {
     window.location = 'confirmation.html';
     return;
   }
-
+  document.getElementById('payerror').focus();
   problems.forEach(function (p) {
     var el = document.getElementById(p.id);
     if (!el) { return; }
