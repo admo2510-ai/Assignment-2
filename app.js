@@ -72,17 +72,13 @@ function validateCheckout(e) {
     n.parentNode.removeChild(n);
   });
 
-  document.getElementById('payerror').textContent = problems.map(function(p) {
-    return p.message;
-  }).join(' ');
-
 
   
   if (problems.length === 0) {
     window.location = 'confirmation.html';
     return;
   }
-  document.getElementById('payerror').focus();
+
   problems.forEach(function (p) {
     var el = document.getElementById(p.id);
     if (!el) { return; }
